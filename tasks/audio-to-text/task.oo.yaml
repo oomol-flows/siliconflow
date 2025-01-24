@@ -1,0 +1,33 @@
+inputs_def:
+  - handle: audio
+    description: Input
+    json_schema:
+      type: string
+      ui:widget: file
+  - handle: api_key
+    json_schema:
+      contentMediaType: oomol/secret
+      type: string
+    value: ""
+  - handle: model
+    json_schema:
+      enum:
+        - FunAudioLLM/SenseVoiceSmall
+      ui:options:
+        labels:
+          - FunAudioLLM/SenseVoiceSmall
+    value: FunAudioLLM/SenseVoiceSmall
+outputs_def:
+  - handle: text
+    description: Output
+    json_schema:
+      type: string
+ui:
+  default_width: 450
+executor:
+  name: python
+  options:
+    spawn: false
+    entry: main.py
+title: Audio To Text
+icon: ":fa6-solid:book-open:"

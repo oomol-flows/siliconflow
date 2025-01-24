@@ -1,0 +1,15 @@
+version: 0.0.4
+scripts:
+  # Script executed when the container is first loaded
+  # eg: bootstrap: pip install pandas
+  bootstrap: |
+    pnpm install && pip install -r requirements.txt
+dependencies:
+  sharp-image-process: 0.0.1
+  data-analysis-examples: 0.0.1
+icon: https://package-assets.oomol.com/packages/siliconflow/0.0.3/files/package/icon.png
+name: siliconflow
+releaseNotes: add code repo
+displayName: SiliconFlow
+description: Various feature sets of the Siliconflow platform
+repository: https://github.com/oomol-flows/siliconflow

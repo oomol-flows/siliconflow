@@ -1,0 +1,55 @@
+inputs_def:
+  - handle: content
+    description: Input
+    json_schema:
+      type: string
+      ui:widget: text
+  - handle: api_key
+    json_schema:
+      contentMediaType: oomol/secret
+      type: string
+    value: Custom,deepseek,key
+  - handle: file_path
+    json_schema:
+      type: string
+      ui:widget: dir
+    value:
+    nullable: true
+  - handle: timbre
+    json_schema:
+      enum:
+        - alex
+        - anna
+        - bella
+      ui:options:
+        labels:
+          - alex
+          - anna
+          - bella
+    value: alex
+  - handle: name
+    json_schema:
+      type: string
+    value: ""
+  - handle: model
+    json_schema:
+      enum:
+        - fishaudio/fish-speech-1.5
+      ui:options:
+        labels:
+          - fishaudio/fish-speech-1.5
+    value: fishaudio/fish-speech-1.5
+outputs_def:
+  - handle: audio_address
+    json_schema:
+      type: string
+      ui:widget: file
+ui:
+  default_width: 450
+executor:
+  name: python
+  options:
+    spawn: false
+    entry: main.py
+title: Text To Audio
+icon: ":fa6-solid:file-audio:"

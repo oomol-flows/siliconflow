@@ -1,0 +1,25 @@
+nodes:
+  - task: self::image-generation
+    title: "Image Generation #3"
+    node_id: image-generation#3
+    inputs_from:
+      - handle: token
+        value: Custom,siliconflow,api-key
+      - handle: model
+        value: stabilityai/stable-diffusion-3-5-large
+      - handle: prompt
+        value: A cute cat
+      - handle: negative_prompt
+        value:
+      - handle: image_size
+        value:
+      - handle: batch_size
+        value: 2
+      - handle: seed
+        value:
+      - handle: num_inference_steps
+        value:
+      - handle: guidance_scale
+        value:
+      - handle: prompt_enhancement
+        value:
