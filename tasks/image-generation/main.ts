@@ -44,6 +44,10 @@ export default async function (
     const response = await fetch('https://api.siliconflow.cn/v1/images/generations', options);
     const data = await response.json();
     console.log(data);
+    console.log(response.status);
+    if (!data.images) {
+      throw new Error('No images found in API response');
+    }
     const images = data.images.map((image: { url: string }) => image.url);
     context.preview({
       type: "image",
@@ -51,6 +55,7 @@ export default async function (
     })
   } catch (err) {
     console.error(err);
+    throw err;
   }
 
   return { output: null };

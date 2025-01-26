@@ -6,7 +6,7 @@ nodes:
       - handle: token
         value: Custom,siliconflow,api-key
       - handle: model
-        value: stabilityai/stable-diffusion-3-5-large
+        value: black-forest-labs/FLUX.1-dev
       - handle: prompt
         value: A cute cat
       - handle: negative_prompt
@@ -14,7 +14,30 @@ nodes:
       - handle: image_size
         value:
       - handle: batch_size
-        value: 2
+        value: 1
+      - handle: seed
+        value:
+      - handle: num_inference_steps
+        value:
+      - handle: guidance_scale
+        value:
+      - handle: prompt_enhancement
+        value:
+  - task: self::image-generation
+    title: "Image Generation #1"
+    node_id: image-generation#1
+    inputs_from:
+      - handle: token
+        value: ${{OO_SECRET:SiliconFlow,SiliconFlow,SILICON_FLOW_TOKEN}}
+      - handle: model
+        value: ""
+      - handle: prompt
+      - handle: negative_prompt
+        value:
+      - handle: image_size
+        value:
+      - handle: batch_size
+        value:
       - handle: seed
         value:
       - handle: num_inference_steps
