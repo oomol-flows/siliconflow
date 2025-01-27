@@ -8,7 +8,7 @@ inputs_def:
     json_schema:
       contentMediaType: oomol/secret
       type: string
-    value: Custom,deepseek,key
+    value: ${{OO_SECRET:SiliconFlow,SiliconFlow,SILICON_FLOW_TOKEN}}
   - handle: file_path
     json_schema:
       type: string

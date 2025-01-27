@@ -4,29 +4,29 @@ import requests
 import logging
 from pathlib import Path
 
-# 配置常量
+# Configuration constants
 API_URL = "https://api.siliconflow.cn/v1/audio/transcriptions"
 DEFAULT_MODEL = "FunAudioLLM/SenseVoiceSmall"
 AUDIO_TYPE = "audio/wav"
 
-# 配置日志
+# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def main(params: Dict[str, Any], context: Context) -> Dict[str, str]:
     """
-    主函数：处理音频转文字任务
+    Main function: Handles audio to text transcription task
     
     Args:
-        params: 包含音频文件路径和API密钥的字典
-        context: Oocana上下文对象
+        params: Dictionary containing audio file path and API key
+        context: Oocana context object
         
     Returns:
-        包含转换后文本的字典
+        Dictionary containing converted text
         
     Raises:
-        ValueError: 如果缺少必要参数
-        RuntimeError: 如果转换失败
+        ValueError: If required parameters are missing
+        RuntimeError: If conversion fails
     """
     audio = params.get('audio')
     api_key = params.get('api_key')
@@ -62,19 +62,19 @@ def main(params: Dict[str, Any], context: Context) -> Dict[str, str]:
 
 def transcribe_audio(file_path: str, model: str, api_key: str) -> Dict[str, Any]:
     """
-    调用API进行音频转文字
+    Calls API for audio to text transcription
     
     Args:
-        file_path: 音频文件路径
-        model: 使用的模型名称
-        api_key: API密钥
+        file_path: Audio file path
+        model: Model name to use
+        api_key: API key
         
     Returns:
-        API返回的JSON结果
+        JSON result from API
         
     Raises:
-        ValueError: 如果缺少API密钥
-        requests.exceptions.RequestException: 如果API请求失败
+        ValueError: If API key is missing
+        requests.exceptions.RequestException: If API request fails
     """
     if not api_key:
         error_msg = "API key is required"
