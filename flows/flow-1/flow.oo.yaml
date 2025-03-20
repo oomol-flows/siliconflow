@@ -1,20 +1,36 @@
 nodes:
+  - task: self::text-to-audio
+    title: "Text To Audio #1"
+    node_id: text-to-audio#1
+    inputs_from:
+      - handle: content
+        value: 毛毛是一直可爱的威尔士柯基
+      - handle: api_key
+        value: ${{OO_SECRET:Custom,siliconflow,api-key}}
+      - handle: file_path
+        value:
+      - handle: timbre
+        value: anna
+      - handle: name
+        value: uuu
+      - handle: model
+        value: fishaudio/fish-speech-1.5
   - task: self::image-generation
-    title: "Image Generation #3"
-    node_id: image-generation#3
+    title: "Image Generation #1"
+    node_id: image-generation#1
     inputs_from:
       - handle: token
-        value: Custom,siliconflow,api-key
+        value: ${{OO_SECRET:Custom,siliconflow,api-key}}
       - handle: model
         value: black-forest-labs/FLUX.1-dev
       - handle: prompt
-        value: A cute cat
+        value: a cut cat
       - handle: negative_prompt
         value:
       - handle: image_size
         value:
       - handle: batch_size
-        value: 1
+        value:
       - handle: seed
         value:
       - handle: num_inference_steps

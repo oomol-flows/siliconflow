@@ -14,6 +14,9 @@ def main(params: dict, context: Context):
     model = params.get("model")
     voice: Any = f"{model}:{timbre}"
 
+    if file_path is None:
+        file_path = context.session_dir
+
     speech_file_path = f"{file_path}/{name}.mp3"
     client = OpenAI(api_key=api_key, base_url="https://api.siliconflow.cn/v1")
 
