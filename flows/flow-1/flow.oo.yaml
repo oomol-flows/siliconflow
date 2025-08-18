@@ -39,3 +39,13 @@ nodes:
         value:
       - handle: prompt_enhancement
         value:
+  - node_id: speech-to-text#1
+    title: "Speech To Text #1"
+    inputs_from:
+      - handle: audio
+        value: /oomol-driver/oomol-storage/Tips for building AI agents_cut.mp3
+      - handle: api_key
+        value: "${{OO_SECRET:Custom,siliconflow,api-key}}"
+      - handle: model
+        value: FunAudioLLM/SenseVoiceSmall
+    task: self::speech-to-text
