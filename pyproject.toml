@@ -1,16 +1,21 @@
-[tool.poetry]
-name = "oomol-project"
+[project]
+name = "siliconflow"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = [
+    {name = "alwaysmavs",email = "beingswu@gmail.com"}
+]
 readme = "README.md"
-package-mode = false
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "openai (>=1.99.9,<2.0.0)"
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-openai = "1.58.1"
-requests = "2.32.3"
+[tool.poetry]
+package-mode = false
+packages = [{include = "tts_stt", from = "src"}]
+
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"

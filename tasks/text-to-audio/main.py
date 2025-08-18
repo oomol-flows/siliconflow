@@ -1,5 +1,4 @@
-from oocana import Context, data
-from pathlib import Path
+from oocana import Context
 from openai import OpenAI
 from typing import Any
 
