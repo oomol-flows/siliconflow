@@ -1,13 +1,12 @@
-version: 0.0.9
+version: 0.0.10
 scripts:
-  # Script executed when the container is first loaded
-  # eg: bootstrap: pip install pandas
   bootstrap: |
-    pnpm install && pip install -r requirements.txt
+    npm install
+    poetry install --no-root
 dependencies:
 icon: https://package-assets.oomol.com/packages/siliconflow/0.0.3/files/package/icon.png
 name: siliconflow
-releaseNotes: update poetry
+releaseNotes: update package yaml
 displayName: SiliconFlow
 description: Various feature sets of the Siliconflow platform
 repository: https://github.com/oomol-flows/siliconflow
