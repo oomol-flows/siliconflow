@@ -52,4 +52,5 @@ executor:
     spawn: false
     entry: main.py
 title: Text To Audio
-icon: ":fa6-solid:file-audio:"
+icon: ":carbon:mobile-audio:"
+description: 这是一个文字转语音的模块，输入一段文字生成一段语音

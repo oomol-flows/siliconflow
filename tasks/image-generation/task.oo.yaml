@@ -79,4 +79,5 @@ executor:
     spawn: false
     entry: main.ts
 title: Image Generation
-icon: ":fa6-solid:image:"
+icon: ":carbon:image:"
+description: 这是一个 AI 生成图片的功能模块，输入一段文字生成一张图片

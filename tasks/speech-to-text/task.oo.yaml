@@ -29,5 +29,6 @@ executor:
   options:
     spawn: false
     entry: main.py
-title: Audio To Text
-icon: ":fa6-solid:book-open:"
+title: Speech To Text
+icon: ":carbon:ibm-watson-speech-to-text:"
+description: 本模块的功能是语音转文字，输入一段音频，输出一段文字。

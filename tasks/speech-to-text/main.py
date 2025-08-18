@@ -4,6 +4,16 @@ import requests
 import logging
 from pathlib import Path
 
+#region generated meta
+import typing
+class Inputs(typing.TypedDict):
+    audio: str
+    api_key: str
+    model: typing.Literal["FunAudioLLM/SenseVoiceSmall"]
+class Outputs(typing.TypedDict):
+    text: str
+#endregion
+
 # Configuration constants
 API_URL = "https://api.siliconflow.cn/v1/audio/transcriptions"
 DEFAULT_MODEL = "FunAudioLLM/SenseVoiceSmall"
