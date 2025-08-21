@@ -1,4 +1,4 @@
-version: 0.0.10
+version: 0.0.11
 scripts:
   bootstrap: |
     npm install
@@ -6,7 +6,7 @@ scripts:
 dependencies:
 icon: https://package-assets.oomol.com/packages/siliconflow/0.0.3/files/package/icon.png
 name: siliconflow
-releaseNotes: update package yaml
+releaseNotes: update version
 displayName: SiliconFlow
 description: Various feature sets of the Siliconflow platform
 repository: https://github.com/oomol-flows/siliconflow
